@@ -1,5 +1,7 @@
 name: Docker and Push Image in Package
-on: workflow_call:
+on:
+  push:
+    tags: [ v* ]
 
 env:
   IMAGEN_TAG: ${{ github.ref_name }}
